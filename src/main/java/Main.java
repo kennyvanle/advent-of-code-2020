@@ -1,6 +1,7 @@
 package main.java;
 
 import main.java.handler.Day1Handler;
+import main.java.handler.Day2Handler;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,6 +12,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Day 1 part 1 solution is: " +day1part1());
         System.out.println("Day 1 part 2 solution is: " +day1part2());
+        System.out.println("Day 2 part 1 solution is: " +day2part1());
+        System.out.println("Day 2 part 2 solution is: " +day2part2());
     }
 
     public static int day1part1(){
@@ -37,6 +40,32 @@ public class Main {
         return product;
     }
 
+
+    public static int day2part1(){
+        int valid = 0;
+        List<String> ls = new ArrayList<>();
+        try {
+            ls = readDataString("day2input.csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        valid = Day2Handler.day2part1(ls);
+        return valid;
+    }
+
+
+    public static int day2part2(){
+        int valid = 0;
+        List<String> ls = new ArrayList<>();
+        try {
+            ls = readDataString("day2input.csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        valid = Day2Handler.day2part2(ls);
+        return valid;
+    }
+
     public static List<Integer> readDataInts(String file) throws IOException {
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         InputStream is = classloader.getResourceAsStream(file);
@@ -45,6 +74,18 @@ public class Main {
         String line;
         while ((line=r.readLine()) != null) {
             ls.add(Integer.parseInt(line));
+        }
+        return ls;
+    }
+
+    public static List<String> readDataString(String file) throws IOException {
+        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        InputStream is = classloader.getResourceAsStream(file);
+        BufferedReader r = new BufferedReader(new InputStreamReader(is));
+        List<String> ls = new ArrayList<>();
+        String line;
+        while ((line=r.readLine()) != null) {
+            ls.add(line);
         }
         return ls;
     }
