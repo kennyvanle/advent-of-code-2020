@@ -2,6 +2,7 @@ package main.java;
 
 import main.java.handler.Day1Handler;
 import main.java.handler.Day2Handler;
+import main.java.handler.Day3Handler;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class Main {
         System.out.println("Day 1 part 2 solution is: " +day1part2());
         System.out.println("Day 2 part 1 solution is: " +day2part1());
         System.out.println("Day 2 part 2 solution is: " +day2part2());
+        System.out.println("Day 3 part 1 solution is: " +day3part1());
     }
 
     public static int day1part1(){
@@ -63,6 +65,18 @@ public class Main {
             e.printStackTrace();
         }
         valid = Day2Handler.day2part2(ls);
+        return valid;
+    }
+
+    public static int day3part1(){
+        int valid = 0;
+        List<String> ls = new ArrayList<>();
+        try {
+            ls = readDataString("day3input.csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        valid = Day3Handler.day3part1(ls, 3, 1);
         return valid;
     }
 
