@@ -3,9 +3,11 @@ package main.java;
 import main.java.handler.Day1Handler;
 import main.java.handler.Day2Handler;
 import main.java.handler.Day3Handler;
+import main.java.model.Slope;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -16,6 +18,7 @@ public class Main {
         System.out.println("Day 2 part 1 solution is: " +day2part1());
         System.out.println("Day 2 part 2 solution is: " +day2part2());
         System.out.println("Day 3 part 1 solution is: " +day3part1());
+        System.out.println("Day 3 part 2 solution is: " +day3part2());
     }
 
     public static int day1part1(){
@@ -77,6 +80,26 @@ public class Main {
             e.printStackTrace();
         }
         valid = Day3Handler.day3part1(ls, 3, 1);
+        return valid;
+    }
+
+    public static long day3part2(){
+        long valid = 0;
+        List<String> ls = new ArrayList<>();
+        try {
+            ls = readDataString("day3input.csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Slope slope1 = new Slope(1,1);
+        Slope slope2 = new Slope(3,1);
+        Slope slope3 = new Slope(5,1);
+        Slope slope4 = new Slope(7,1);
+        Slope slope5 = new Slope(1,2);
+        List<Slope> listOfSlopes = Arrays.asList(slope1, slope2, slope3, slope4, slope5);
+
+        valid = Day3Handler.day3part2(ls, listOfSlopes);
         return valid;
     }
 
