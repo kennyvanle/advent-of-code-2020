@@ -3,14 +3,20 @@ package main.java;
 import main.java.handler.Day1Handler;
 import main.java.handler.Day2Handler;
 import main.java.handler.Day3Handler;
+import main.java.handler.Day4Handler;
 import main.java.model.Slope;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+    private static Charset charset = StandardCharsets.UTF_8;
 
     public static void main(String[] args) {
         System.out.println("Day 1 part 1 solution is: " +day1part1());
@@ -19,6 +25,8 @@ public class Main {
         System.out.println("Day 2 part 2 solution is: " +day2part2());
         System.out.println("Day 3 part 1 solution is: " +day3part1());
         System.out.println("Day 3 part 2 solution is: " +day3part2());
+        System.out.println("Day 4 part 1 solution is: " +day4part1());
+        System.out.println("Day 4 part 2 solution is: " +day4part2());
     }
 
     public static int day1part1(){
@@ -103,6 +111,22 @@ public class Main {
         return valid;
     }
 
+    public static long day4part1(){
+        long valid = 0;
+        String input;
+        input = getFileContent("day4input.csv");
+        valid = Day4Handler.part1(input);
+        return valid;
+    }
+
+    public static long day4part2(){
+        long valid = 0;
+        String input;
+        input = getFileContent("day4input.csv");
+        valid = Day4Handler.part2(input);
+        return valid;
+    }
+
     public static List<Integer> readDataInts(String file) throws IOException {
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         InputStream is = classloader.getResourceAsStream(file);
@@ -125,5 +149,17 @@ public class Main {
             ls.add(line);
         }
         return ls;
+    }
+
+    private static String getFileContent(String filename) {
+        String content = null;
+        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        try {
+            File file = new File(classloader.getResource(filename).getFile());
+            content = new String(Files.readAllBytes(Paths.get(file.getPath())));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return content;
     }
 }
