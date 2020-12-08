@@ -1,9 +1,6 @@
 package main.java;
 
-import main.java.handler.Day1Handler;
-import main.java.handler.Day2Handler;
-import main.java.handler.Day3Handler;
-import main.java.handler.Day4Handler;
+import main.java.handler.*;
 import main.java.model.Slope;
 
 import java.io.*;
@@ -13,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -27,6 +25,8 @@ public class Main {
         System.out.println("Day 3 part 2 solution is: " +day3part2());
         System.out.println("Day 4 part 1 solution is: " +day4part1());
         System.out.println("Day 4 part 2 solution is: " +day4part2());
+        System.out.println("Day 5 part 1 solution is: " +day5part1());
+        System.out.println("Day 5 part 2 solution is: " +day5part2());
     }
 
     public static int day1part1(){
@@ -125,6 +125,39 @@ public class Main {
         input = getFileContent("day4input.csv");
         valid = Day4Handler.part2(input);
         return valid;
+    }
+
+    public static int day5part1(){
+        List<String> ls = new ArrayList<>();
+        try {
+            ls = readDataString("day5input.csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        List<Integer> seatIdList = new ArrayList<>();
+        for(String s: ls){
+            seatIdList.add(Day5Handler.getSeatId(s));
+        }
+        return Collections.max(seatIdList);
+    }
+
+    public static int day5part2(){
+        List<String> ls = new ArrayList<>();
+        try {
+            ls = readDataString("day5input.csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        List<Integer> seatIdList = new ArrayList<>();
+        for(String s: ls){
+            seatIdList.add(Day5Handler.getSeatId(s));
+        }
+        Collections.sort(seatIdList);
+        int seat = Collections.max(seatIdList);
+        while(seatIdList.contains(seat)){
+            seat--;
+        }
+        return seat;
     }
 
     public static List<Integer> readDataInts(String file) throws IOException {
