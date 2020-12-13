@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="49873d97-d379-4a5a-9f48-ba6ee5a97d0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handler/Day6Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/Day6Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/day6/Day6Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/day6/Day6Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,22 +60,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day4Test.part1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code-2020" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="day4" />
-      <option name="MAIN_CLASS_NAME" value="day4.Day4Test" />
-      <option name="METHOD_NAME" value="part1Test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Day4Test.part2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2020" />
       <extension name="coverage">
@@ -123,20 +108,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day6Test.part2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code-2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day6" />
+      <option name="MAIN_CLASS_NAME" value="day6.Day6Test" />
+      <option name="METHOD_NAME" value="part2Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="JUnit.Day4Test.part1Test" />
       <item itemvalue="JUnit.Day4Test.part2Test" />
       <item itemvalue="JUnit.Day5Test.part1TestSeatId" />
       <item itemvalue="JUnit.Day6Test.part1Test" />
+      <item itemvalue="JUnit.Day6Test.part2Test" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.Day6Test.part2Test" />
         <item itemvalue="JUnit.Day6Test.part1Test" />
         <item itemvalue="JUnit.Day5Test.part1TestSeatId" />
         <item itemvalue="JUnit.Day4Test.part2Test" />
-        <item itemvalue="JUnit.Day4Test.part1Test" />
       </list>
     </recent_temporary>
   </component>
@@ -167,22 +168,22 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="662" y="424" key="DetectedRootsChooserDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1607293485113" />
-    <state width="1750" height="392" key="GridCell.Tab.0.bottom" timestamp="1607822961041">
+    <state width="1750" height="384" key="GridCell.Tab.0.bottom" timestamp="1607823403590">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1607822961041" />
-    <state width="1750" height="392" key="GridCell.Tab.0.center" timestamp="1607822961040">
+    <state width="1750" height="384" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1607823403590" />
+    <state width="1750" height="384" key="GridCell.Tab.0.center" timestamp="1607823403589">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1607822961040" />
-    <state width="1750" height="392" key="GridCell.Tab.0.left" timestamp="1607822961040">
+    <state width="1750" height="384" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1607823403589" />
+    <state width="1750" height="384" key="GridCell.Tab.0.left" timestamp="1607823403589">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1607822961040" />
-    <state width="1750" height="392" key="GridCell.Tab.0.right" timestamp="1607822961041">
+    <state width="1750" height="384" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1607823403589" />
+    <state width="1750" height="384" key="GridCell.Tab.0.right" timestamp="1607823403590">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1607822961041" />
+    <state width="1750" height="384" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1607823403590" />
     <state width="1750" height="392" key="GridCell.Tab.1.bottom" timestamp="1607822961043">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

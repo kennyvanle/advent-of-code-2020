@@ -24,6 +24,25 @@ public class Day6Test {
                 System.lineSeparator() +
                 "b";
         Assert.assertEquals(11, Day6Handler.part1(input));
+    }
 
+    @Test
+    public void part2Test(){
+        String input = "abc" + System.lineSeparator() +
+                System.lineSeparator() +
+                "a" + System.lineSeparator() +
+                "b" + System.lineSeparator() +
+                "c" + System.lineSeparator() +
+                System.lineSeparator() +
+                "ab" + System.lineSeparator() +
+                "ac" + System.lineSeparator() +
+                System.lineSeparator() +
+                "a" + System.lineSeparator() +
+                "a" + System.lineSeparator() +
+                "a" + System.lineSeparator() +
+                "a" + System.lineSeparator() +
+                System.lineSeparator() +
+                "b";
+        Assert.assertEquals(6, Day6Handler.part2(input));
     }
 }

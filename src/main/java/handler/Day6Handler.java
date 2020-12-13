@@ -23,4 +23,22 @@ public class Day6Handler {
         }
         return sum;
     }
+
+    public static int part2(String input){
+        int sum = 0;
+        List<String> ls = Arrays.asList(input.split(System.lineSeparator()+System.lineSeparator()));
+        for(String s: ls){
+            List<Character> listOfQuestions = new LinkedList<>(Arrays.asList('a','b','c','d','e','f','g','h','i','j','k','l',
+                    'm','n','o','p','q','r','s','t','u','v','w','x','y','z'));
+            for(Character c: s.toCharArray()){
+                if(listOfQuestions.contains(c)){
+                    if(s.chars().filter(num -> num == c).count()==s.split(System.lineSeparator()).length){
+                        sum++;
+                        listOfQuestions.remove(c);
+                    }
+                }
+            }
+        }
+        return sum;
+    }
 }
