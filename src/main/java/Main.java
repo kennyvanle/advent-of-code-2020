@@ -27,6 +27,7 @@ public class Main {
         System.out.println("Day 4 part 2 solution is: " +day4part2());
         System.out.println("Day 5 part 1 solution is: " +day5part1());
         System.out.println("Day 5 part 2 solution is: " +day5part2());
+        System.out.println("Day 6 part 1 solution is: " +day6part1());
     }
 
     public static int day1part1(){
@@ -158,6 +159,14 @@ public class Main {
             seat--;
         }
         return seat;
+    }
+
+    public static int day6part1(){
+        int sum = 0;
+        String input;
+        input = getFileContent("day6input.csv");
+        sum = Day6Handler.part1(input);
+        return sum;
     }
 
     public static List<Integer> readDataInts(String file) throws IOException {
